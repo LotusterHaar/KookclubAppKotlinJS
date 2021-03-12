@@ -23,43 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd4784ca-f746-4d8f-a3fe-93089ba6c0f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/shared_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/src/appbar/AppBar.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/6.6.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/artifacts/Kookclub_App_1_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/src/main/kotlin/WelcomeStyles.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/src/main/kotlin/client.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/src/main/kotlin/welcome.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KookclubApp/src/main/resources/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/kookclub-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/kookclub-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/src/app/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,9 +71,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kookclub-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -141,8 +111,19 @@
       <workItem from="1614949010071" duration="1728000" />
       <workItem from="1615199054698" duration="2187000" />
       <workItem from="1615464373887" duration="3360000" />
-      <workItem from="1615468281289" duration="202000" />
+      <workItem from="1615468281289" duration="2780000" />
+      <workItem from="1615471115865" duration="89000" />
+      <workItem from="1615471243639" duration="647000" />
+      <workItem from="1615473356191" duration="429000" />
     </task>
+    <task id="LOCAL-00001" summary="initial create-react-kotlin-app template">
+      <created>1615468672858</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615468672858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,5 +140,13 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial create-react-kotlin-app template" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial create-react-kotlin-app template" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

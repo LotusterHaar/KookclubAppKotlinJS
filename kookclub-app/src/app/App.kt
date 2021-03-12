@@ -1,18 +1,13 @@
 package app
 
+import appbar.showAppBar
 import react.*
 import react.dom.*
-import logo.*
 import ticker.*
 
 class App : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
-        div("App-header") {
-            logo()
-            h2 {
-                +"Welcome to React with Kotlin"
-            }
-        }
+        showAppBar()
         p("App-intro") {
             +"To get started, edit "
             code { +"app/App.kt" }
