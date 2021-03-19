@@ -9,11 +9,11 @@ import ticker.*
 class App : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
         showAppBar()
-        showMenuCard()
-        showMenuCard()
-        showMenuCard()
-        showMenuCard()
-        showMenuCard()
+        showMenuCard { day = "Woensdag"; selectAll = false } //       showMenuCard()
+//        showMenuCard()
+//        showMenuCard()
+//        showMenuCard()
+//        showMenuCard()
         p("App-intro") {
             +"To get started, edit "
             code { +"app/App.kt" }
