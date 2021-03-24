@@ -20,16 +20,25 @@ import styled.styledLabel
 
 external interface MenuCardProps : RProps {
     var day: String
-    var selectAll: Boolean
 }
 
 
 val showMenuCard = functionalComponent<MenuCardProps> { props ->
 
     val (choiceValue, setChoiceValue) = useState("1")
+    val (colorHeaderCard, setColorHeaderCard) = useState(Color.blue)
     val options = listOf("Ik eet niet mee", "Misschien", "Ik eet mee")
 
-    val (teller, setTeller) = useState(10)
+   fun getColorFromChoice (colorValue: String): Unit {
+       when (colorValue) {
+           "0" -> setColorHeaderCard(Color.darkRed)
+           "1" -> setColorHeaderCard(Color.blue)
+           "2" -> setColorHeaderCard(Color.darkGreen)
+           else -> setColorHeaderCard(colorHeaderCard)
+       }
+   }
+
+
     styledDiv {
         css {
             classes = mutableListOf("card m-2")
@@ -42,10 +51,10 @@ val showMenuCard = functionalComponent<MenuCardProps> { props ->
             styledDiv {
                 css {
                     classes = mutableListOf("col-md-4 text-light")
-                    backgroundColor = Color.darkRed
+                    backgroundColor = colorHeaderCard
+
                 }
-                attrs.onClickFunction = { setTeller(teller + 5); }
-                +(props.day + teller.toString())
+                +(props.day)
             }
             styledDiv {
                 css {
@@ -78,6 +87,7 @@ val showMenuCard = functionalComponent<MenuCardProps> { props ->
                                         onChangeFunction = {
                                             val target = it.target as HTMLInputElement
                                             setChoiceValue(target.value)
+                                            getColorFromChoice(target.value.toString())
                                             console.log(target.value)
                                         }
                                         value = index.toString()
@@ -89,7 +99,6 @@ val showMenuCard = functionalComponent<MenuCardProps> { props ->
                                 label(classes = "btn btn-outline-primary") {
                                     attrs["htmlFor"] = "btnradio-$index"
                                     +text
-
                                 }
                             }
                         }
@@ -98,6 +107,7 @@ val showMenuCard = functionalComponent<MenuCardProps> { props ->
 
             }
         }
+
     }
 
 
