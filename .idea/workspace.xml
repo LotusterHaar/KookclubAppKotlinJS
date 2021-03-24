@@ -23,13 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd4784ca-f746-4d8f-a3fe-93089ba6c0f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/src/api/Api.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/kookclub-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/kookclub-app-client.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -93,7 +90,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
   </component>
@@ -114,7 +113,8 @@
       <workItem from="1615471243639" duration="647000" />
       <workItem from="1615473356191" duration="429000" />
       <workItem from="1616591472530" duration="21000" />
-      <workItem from="1616591520940" duration="3000" />
+      <workItem from="1616591520940" duration="2623000" />
+      <workItem from="1616594683650" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="initial create-react-kotlin-app template">
       <created>1615468672858</created>
@@ -123,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615468672858</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="projectfiles changed">
+      <created>1616591598360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616591598360</updated>
+    </task>
+    <task id="LOCAL-00003" summary="projectfiles changed">
+      <created>1616591778680</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616591778680</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +157,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial create-react-kotlin-app template" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial create-react-kotlin-app template" />
+    <MESSAGE value="projectfiles changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="projectfiles changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

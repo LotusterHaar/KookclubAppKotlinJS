@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/kookclub-app.iml" filepath="$PROJECT_DIR$/kookclub-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kookclub-app-client.iml" filepath="$PROJECT_DIR$/kookclub-app-client.iml" />
     </modules>
   </component>
 </project>
