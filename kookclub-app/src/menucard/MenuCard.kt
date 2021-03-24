@@ -26,16 +26,8 @@ external interface MenuCardProps : RProps {
 
 val showMenuCard = functionalComponent<MenuCardProps> { props ->
 
-    val (choiceValue, setChoiceValue) = useState("2")
-
-    val (text, setText) = useState("")
-    val onChangeValue: (Event) -> Unit = {
-        val target = it.target as HTMLInputElement
-
-        setChoiceValue(target.value)
-        console.log("hey")
-        console.log(target.value)
-    }
+    val (choiceValue, setChoiceValue) = useState("1")
+    val options = listOf("Ik eet niet mee", "Misschien", "Ik eet mee")
 
     val (teller, setTeller) = useState(10)
     styledDiv {
@@ -73,95 +65,44 @@ val showMenuCard = functionalComponent<MenuCardProps> { props ->
                                 +"Laatst aangepast 3 minuten geleden"
                             }
                         }
-
                         styledDiv {
                             css {
                                 classes = mutableListOf("btn-group-sm")
                             }
                             attrs["role"] = "group"
                             attrs["aria-label"] = "Basic radio toggle button group"
-                            styledInput( type = InputType.radio, name = "btnradio") {
-                                css{ classes =  mutableListOf("btn-check")}
-                                attrs {
-                                    onChangeFunction = {
-                                        val target = it.target as HTMLInputElement
-                                        setChoiceValue(target.value)
-                                        console.log(target.value)
+                            options.forEachIndexed { index, text ->
+                                styledInput(type = InputType.radio, name = "btnradio") {
+                                    css { classes = mutableListOf("btn-check") }
+                                    attrs {
+                                        onChangeFunction = {
+                                            val target = it.target as HTMLInputElement
+                                            setChoiceValue(target.value)
+                                            console.log(target.value)
+                                        }
+                                        value = index.toString()
+                                        defaultChecked = index.toString() == choiceValue
+                                        autoComplete = false
+                                        id = "btnradio-$index"
                                     }
-                                    key = "radio1"
-                                    value= "1"
-                                    id  = "btnradio"+ value
-                                    checked = value == choiceValue
-                                    autoComplete= false
+                                }
+                                label(classes = "btn btn-outline-primary") {
+                                    attrs["htmlFor"] = "btnradio-$index"
+                                    +text
 
                                 }
-                            }
-                            label(classes = "btn btn-outline-primary") {
-                                attrs["htmlFor"] = "btnradio1"
-                                +"Ik eet niet mee"
-
-                            }
-                            styledInput(type = InputType.radio, name = "btnradio") {
-                                css{ classes =  mutableListOf("btn-check")}
-                                attrs {
-
-                                    onChangeFunction = {
-
-                                        val target = it.target as HTMLInputElement
-                                        setChoiceValue(target.value)
-                                        console.log(target.value)
-                                    }
-                                    key = "radio2"
-                                    value= "2"
-                                    id  = "btnradio"+ value
-                                    checked = value == choiceValue
-                                    autoComplete= false
-                                }
-
-                            }
-
-                            styledLabel {
-                                css{ classes =  mutableListOf("btn btn-outline-primary")}
-                                attrs["htmlFor"] = "btnradio2"
-                                +"Misschien"
-
-                            }
-                            styledInput(type = InputType.radio, name = "btnradio") {
-                                css{ classes =  mutableListOf("btn-check")}
-                                key = "radio3"
-                                attrs {
-                                    onChangeFunction = {
-
-                                        val target = it.target as HTMLInputElement
-                                        setChoiceValue(target.value)
-                                        console.log(target.value)
-                                    }
-                                    key = "radio3"
-                                    value= "3"
-                                    id  = "btnradio"+ value
-                                    checked = value == choiceValue
-                                    autoComplete= false
-
-                                }
-                            }
-                            styledLabel{
-                                css{ classes =  mutableListOf("btn btn-outline-primary")}
-                                 attrs["htmlFor"] = "btnradio3"
-                                +"Ik eet mee"
-
                             }
                         }
                     }
-
                 }
+
             }
         }
-
-
     }
 
 
 }
+
 
 fun RBuilder.showMenuCard(handler: MenuCardProps.() -> Unit) = child(showMenuCard) {
     attrs { handler() }
