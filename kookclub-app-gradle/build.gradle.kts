@@ -1,8 +1,14 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpack
 
+
+val kotlinVersion = "1.4.30"
+val serializationVersion =  "1.0.0-RC"
+val ktorVersion = "1.5.2"
+
 plugins {
     kotlin("multiplatform") version "1.4.31"
     application
+    kotlin("plugin.serialization") version "1.4.31"
 }
 
 group = "me.lotus"
@@ -11,6 +17,7 @@ version = "1.0-SNAPSHOT"
 repositories {
     jcenter()
     mavenCentral()
+    maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
     maven { url = uri("https://dl.bintray.com/kotlin/kotlin-js-wrappers") }
     maven { url = uri("https://dl.bintray.com/kotlin/kotlinx") }
     maven { url = uri("https://dl.bintray.com/kotlin/ktor") }
@@ -44,7 +51,13 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(kotlin("stdlib-common"))
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -53,9 +66,14 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-server-netty:1.4.0")
-                implementation("io.ktor:ktor-html-builder:1.4.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
+                implementation("io.ktor:ktor-serialization:$ktorVersion")
+                implementation("io.ktor:ktor-server-core:$ktorVersion")
+                implementation("io.ktor:ktor-server-netty:$ktorVersion")
+                implementation("io.ktor:ktor-html-builder:$ktorVersion")
+                implementation("ch.qos.logback:logback-classic:1.2.3")
+                implementation("io.ktor:ktor-websockets:$ktorVersion")
+                implementation("org.litote.kmongo:kmongo-coroutine-serialization:4.1.1")
             }
         }
         val jvmTest by getting {
@@ -67,7 +85,20 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains:kotlin-react:16.13.1-pre.113-kotlin-1.4.0")
                 implementation("org.jetbrains:kotlin-react-dom:16.13.1-pre.113-kotlin-1.4.0")
-                implementation("org.jetbrains:kotlin-styled:1.0.0-pre.113-kotlin-1.4.0")
+
+                implementation("io.ktor:ktor-client-js:$ktorVersion") //include http&websockets
+
+                //ktor client js json
+                implementation("io.ktor:ktor-client-json-js:$ktorVersion")
+                implementation("io.ktor:ktor-client-serialization-js:$ktorVersion")
+                implementation(npm("react", "17.0.1"))
+                implementation(npm("react-dom", "17.0.1"))
+                implementation(npm("styled-components", "^4.4.1"))
+                implementation(npm("react-is", "^17.0.1"))
+                implementation(npm("inline-style-prefixer","^6.0.0"))
+                implementation("org.jetbrains:kotlin-css:1.0.0-pre.148-kotlin-1.4.21")
+                implementation("org.jetbrains:kotlin-css-js:1.0.0-pre.93-kotlin-1.4-M1-eap-93-3")
+                implementation("org.jetbrains:kotlin-styled:5.2.1-pre.148-kotlin-1.4.21")
             }
         }
         val jsTest by getting {
