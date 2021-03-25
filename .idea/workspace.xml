@@ -23,10 +23,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd4784ca-f746-4d8f-a3fe-93089ba6c0f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kookclub-app/src/api/Api.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app-create-react-kotlin/kookclub-app-client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app-create-react-kotlin/projectFilesBackup/kookclub-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/artifacts/untitled_js_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/artifacts/untitled_jvm_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.commonMain.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.commonTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.jsMain.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.jsTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.jvmMain.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules/untitled.jvmTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/src/commonMain/kotlin/ShoppingListItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kookclub-app/src/jvmMain/kotlin/Server.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/KotlinJavaScript.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlin_css_js.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlin_extensions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlin_react.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlin_react_dom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlin_styled.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/libraries/kotlinx_html_js.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kookclub-app/kookclub-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kookclub-app/kookclub-app-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/runConfigurations/Debug_in_Chrome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/.idea/runConfigurations/npm_start.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/kookclub-app-client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/projectFilesBackup/kookclub-app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/api/Api.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/app/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/app/App.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/appbar/AppBar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/index/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/index/index.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/logo/Logo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/logo/Logo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/logo/kotlin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/logo/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/menucard/MenuCard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/src/ticker/Ticker.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kookclub-app/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +104,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
   <component name="ProjectId" id="1pL2yhxIjcMMAVcD8RhmmheeMKj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,7 +119,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/kookclub-app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -114,7 +165,10 @@
       <workItem from="1615473356191" duration="429000" />
       <workItem from="1616591472530" duration="21000" />
       <workItem from="1616591520940" duration="2623000" />
-      <workItem from="1616594683650" duration="447000" />
+      <workItem from="1616594683650" duration="1639000" />
+      <workItem from="1616606271068" duration="838000" />
+      <workItem from="1616607832787" duration="1544000" />
+      <workItem from="1616609904583" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="initial create-react-kotlin-app template">
       <created>1615468672858</created>
@@ -137,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616591778680</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ktor Api added, not checked yet">
+      <created>1616595195952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616595195952</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +219,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial create-react-kotlin-app template" />
     <MESSAGE value="projectfiles changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="projectfiles changed" />
+    <MESSAGE value="Ktor Api added, not checked yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ktor Api added, not checked yet" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
