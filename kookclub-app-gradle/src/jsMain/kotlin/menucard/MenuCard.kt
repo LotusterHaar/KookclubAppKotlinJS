@@ -20,6 +20,8 @@ import styled.styledLabel
 
 external interface MenuCardProps : RProps {
     var day: String
+    var desc: String
+    var menuId: Int
 }
 
 
@@ -28,7 +30,6 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
     val (choiceValue, setChoiceValue) = useState("1")
     val (colorHeaderCard, setColorHeaderCard) = useState(Color.blue)
     val options = listOf("Ik eet niet mee", "Misschien", "Ik eet mee")
-    val (menuList, setMenuList) = useState(emptyList<MenuListItem>())
 
    fun getColorFromChoice (colorValue: String): Unit {
        when (colorValue) {
@@ -66,7 +67,7 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                     css {
                         classes = mutableListOf("card-body")
                         p(classes = "h5 card-title") {
-                            +"Biefstuk met aardappeltjes"
+                            + props.desc
                         }
                         p(classes = "card-text") {
                             +"Met boontjes, worteltjes en champignonroomsaus"
@@ -84,6 +85,7 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                             attrs["aria-label"] = "Basic radio toggle button group"
                             options.forEachIndexed { index, text ->
                                 styledInput(type = InputType.radio, name = "btnradio") {
+
                                     css { classes = mutableListOf("btn-check") }
                                     attrs {
                                         onChangeFunction = {
@@ -96,11 +98,12 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                                         value = index.toString()
                                         defaultChecked = index.toString() == choiceValue
                                         autoComplete = false
-                                        id = "btnradio-$index"
+                                        id = "btnradio-$index-$props.desc-$props.menuId"
+                                        key=props.desc+index
                                     }
                                 }
                                 label(classes = "btn btn-outline-primary") {
-                                    attrs["htmlFor"] = "btnradio-$index"
+                                    attrs["htmlFor"] = "btnradio-$index-$props.des-$props.menuId"
                                     +text
                                 }
                             }
