@@ -25,7 +25,7 @@ val App = functionalComponent<RProps>() { _ ->
     showAppBar()
 
     menuList.forEach{ item->
-        showMenuCard { menuId = item.priority; day = "Woensdag"; desc = item.desc}
+        showMenuCard { menuId = item.priority; day = "Dinsdag"; desc = item.desc}
     }
     p("App-intro") {
         +"To get started, edit "

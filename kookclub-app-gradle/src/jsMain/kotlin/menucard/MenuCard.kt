@@ -98,12 +98,12 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                                         value = index.toString()
                                         defaultChecked = index.toString() == choiceValue
                                         autoComplete = false
-                                        id = "btnradio-$index-$props.desc-$props.menuId"
+                                        id = "btnradio-$index-"+props.desc+"-"+props.menuId
                                         key=props.desc+index
                                     }
                                 }
                                 label(classes = "btn btn-outline-primary") {
-                                    attrs["htmlFor"] = "btnradio-$index-$props.desc-$props.menuId"
+                                    attrs["htmlFor"] = "btnradio-$index-"+props.desc+"-"+props.menuId
                                     +text
                                 }
                             }
