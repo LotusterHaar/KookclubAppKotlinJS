@@ -19,7 +19,7 @@ fun HTML.index() {
     head {
         title("Hello from Ktor!")
         link(href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css") {
-            rel="stylesheet"
+            rel = "stylesheet"
         }
 
 
@@ -32,7 +32,7 @@ fun HTML.index() {
             id = "root"
         }
         script(src = "/static/output.js") {}
-        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js") {
+        script(src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js") {
         }
 
     }
@@ -59,8 +59,8 @@ val menuList = mutableListOf(
 )
 
 fun main() {
-   // val port = System.getenv("PORT")?.toInt() ?: 8080
-   // embeddedServer(Netty, port) {
+    // val port = System.getenv("PORT")?.toInt() ?: 8080
+    // embeddedServer(Netty, port) {
     embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
         install(ContentNegotiation) {
             json()
@@ -76,7 +76,7 @@ fun main() {
         }
 
         routing {
-            get("/") {
+          /*  get("/") {
                 call.respondText(
                     this::class.java.classLoader.getResource("index.html")!!.readText(),
                     ContentType.Text.Html
@@ -84,21 +84,19 @@ fun main() {
             }
             static("/") {
                 resources("")
-            }
-            routing {
-                route(MenuListItem.path) {
-                    get {
-                        call.respond(menuList)
-                    }
-                    post {
-                        menuList += call.receive<MenuListItem>()
-                        call.respond(HttpStatusCode.OK)
-                    }
-                    delete("/{id}") {
-                        val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
-                        menuList.removeAt(id)
-                        call.respond(HttpStatusCode.OK)
-                    }
+            }*/
+            route(MenuListItem.path) {
+                get {
+                    call.respond(menuList)
+                }
+                post {
+                    menuList += call.receive<MenuListItem>()
+                    call.respond(HttpStatusCode.OK)
+                }
+                delete("/{id}") {
+                    val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
+                    menuList.removeAt(id)
+                    call.respond(HttpStatusCode.OK)
                 }
             }
         }
