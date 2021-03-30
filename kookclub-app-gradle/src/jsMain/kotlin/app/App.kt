@@ -8,9 +8,9 @@ import react.dom.*
 import showMenuCard
 import ticker.*
 
-class App : RComponent<RProps, RState>(){
+val App = functionalComponent<RProps>(){_->
 
-    override fun RBuilder.render() {
+
         showAppBar()
         showMenuCard { day = "Woensdag" } //       showMenuCard()
 //        showMenuCard()
@@ -28,9 +28,9 @@ class App : RComponent<RProps, RState>(){
             ticker()
         }
 
-    }
+    child(MenuCardComponent)
 }
 
-fun RBuilder.app() = child(App::class) {}
+
 
 
