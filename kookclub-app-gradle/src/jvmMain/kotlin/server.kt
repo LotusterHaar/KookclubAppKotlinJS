@@ -76,27 +76,30 @@ fun main() {
         }
 
         routing {
-          /*  get("/") {
-                call.respondText(
-                    this::class.java.classLoader.getResource("index.html")!!.readText(),
-                    ContentType.Text.Html
-                )
-            }
-            static("/") {
-                resources("")
-            }*/
-            route(MenuListItem.path) {
+            route("/") {
                 get {
-                    call.respond(menuList)
+                    call.respondText(
+                        this::class.java.classLoader.getResource("index.html")!!.readText(),
+                        ContentType.Text.Html
+                    )
                 }
-                post {
-                    menuList += call.receive<MenuListItem>()
-                    call.respond(HttpStatusCode.OK)
+                static {
+                    resources("")
                 }
-                delete("/{id}") {
-                    val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
-                    menuList.removeAt(id)
-                    call.respond(HttpStatusCode.OK)
+
+                route(MenuListItem.path) {
+                    get {
+                        call.respond(menuList)
+                    }
+                    post {
+                        menuList += call.receive<MenuListItem>()
+                        call.respond(HttpStatusCode.OK)
+                    }
+                    delete("/{id}") {
+                        val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
+                        menuList.removeAt(id)
+                        call.respond(HttpStatusCode.OK)
+                    }
                 }
             }
         }
