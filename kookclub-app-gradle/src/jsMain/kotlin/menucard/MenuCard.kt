@@ -103,7 +103,7 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                                     }
                                 }
                                 label(classes = "btn btn-outline-primary") {
-                                    attrs["htmlFor"] = "btnradio-$index-$props.des-$props.menuId"
+                                    attrs["htmlFor"] = "btnradio-$index-$props.desc-$props.menuId"
                                     +text
                                 }
                             }
