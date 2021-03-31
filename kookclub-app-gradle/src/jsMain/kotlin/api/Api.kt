@@ -27,3 +27,7 @@ suspend fun addMenuListItem(menuListItem: MenuListItem) {
         body = menuListItem
     }
 }
+
+suspend fun deleteShoppingListItem(shoppingListItem: MenuListItem) {
+    jsonClient.delete<Unit>(endpoint + MenuListItem.path + "/${shoppingListItem.id}")
+}

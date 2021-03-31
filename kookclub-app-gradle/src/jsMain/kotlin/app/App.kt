@@ -1,7 +1,8 @@
 package app
 
-import MenuCardComponent
+import InputComponent
 import MenuListItem
+import api.addMenuListItem
 import api.getMenuList
 import appbar.showAppBar
 import react.*
@@ -37,6 +38,19 @@ val App = functionalComponent<RProps>() { _ ->
     p("App-ticker") {
         ticker()
     }
+
+    child(
+        InputComponent,
+        props = jsObject {
+            onSubmit = { input ->
+                val cartItem =MenuListItem(input.replace("!", ""), input.count { it == '!' })
+                GlobalScope.launch {
+                    addMenuListItem(cartItem)
+                    setMenuList(getMenuList())
+                }
+            }
+        }
+    )
 }
 
 
