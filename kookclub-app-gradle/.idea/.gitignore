@@ -6,3 +6,8 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+/build/
+/build/classes/kotlin/jvm/main/
+/build/js/packages/kookclub-gradle/kotlin/
+/.idea/
