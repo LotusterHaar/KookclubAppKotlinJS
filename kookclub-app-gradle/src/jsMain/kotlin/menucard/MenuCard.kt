@@ -84,7 +84,7 @@ val MenuCardComponent = functionalComponent<MenuCardProps> { props ->
                             attrs["role"] = "group"
                             attrs["aria-label"] = "Basic radio toggle button group"
                             options.forEachIndexed { index, text ->
-                                styledInput(type = InputType.radio, name = "btnradio") {
+                                styledInput(type = InputType.radio, name = "btnradio"+props.menuId) {
 
                                     css { classes = mutableListOf("btn-check") }
                                     attrs {
