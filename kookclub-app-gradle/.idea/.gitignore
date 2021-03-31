@@ -9,5 +9,5 @@
 
 /build/
 /build/classes/kotlin/jvm/main/
-/build/js/packages/kookclub-gradle/kotlin/
+/build/js/packages/kookclub-app-gradle/kotlin/
 /.idea/
