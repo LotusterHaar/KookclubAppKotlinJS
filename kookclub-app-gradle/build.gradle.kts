@@ -1,9 +1,12 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpack
 
-
+/*
 val kotlinVersion = "1.4.31"
 val serializationVersion =  "1.1.0"
-val ktorVersion = "1.5.2"
+val ktorVersion = "1.5.2"*/
+val ktorVersion="1.5.2"
+val kotlinVersion="1.4.31"
+val serializationVersion="1.1.0"
 
 plugins {
     kotlin("multiplatform") version "1.4.31"

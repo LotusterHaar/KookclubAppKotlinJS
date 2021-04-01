@@ -28,6 +28,6 @@ suspend fun addMenuListItem(menuListItem: MenuListItem) {
     }
 }
 
-suspend fun deleteShoppingListItem(shoppingListItem: MenuListItem) {
-    jsonClient.delete<Unit>(endpoint + MenuListItem.path + "/${shoppingListItem.id}")
+suspend fun deleteMenuListItem(menuListItem: MenuListItem) {
+    jsonClient.delete<Unit>(endpoint + MenuListItem.path + "/${menuListItem.index}")
 }

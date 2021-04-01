@@ -8,12 +8,11 @@ import io.ktor.routing.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import org.litote.kmongo.*
-import org.litote.kmongo.coroutine.*
-import com.mongodb.ConnectionString
 import io.ktor.html.*
-import org.litote.kmongo.reactivestreams.KMongo
 import kotlinx.html.*
+import io.ktor.http.HttpStatusCode
+import io.ktor.request.receive
+
 
 fun HTML.index() {
     head {
@@ -52,7 +51,7 @@ fun HTML.index() {
 }*/
 
 
-val menuList = mutableListOf(
+val menuList = mutableListOf<MenuListItem>(
     MenuListItem("Cucumbers 🥒", 1),
     MenuListItem("Tomatoes 🍅", 2),
     MenuListItem("Orange Juice 🍊", 3)
@@ -95,10 +94,13 @@ fun main() {
                         menuList += call.receive<MenuListItem>()
                         call.respond(HttpStatusCode.OK)
                     }
-                    delete("/{id}") {
-                        val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
-                        menuList.removeAt(id)
-                        call.respond(HttpStatusCode.OK)
+                    delete("/{index}") {
+                        val id = call.parameters["index"] ?: return@delete call.respond(HttpStatusCode.BadRequest)
+                        if (menuList.removeIf { item -> item.index.toString() == id }) {
+                            call.respondText("Customer removed correctly", status = HttpStatusCode.Accepted)
+                        } else {
+                            call.respondText("Not Found", status = HttpStatusCode.NotFound)
+                        }
                     }
                 }
             }

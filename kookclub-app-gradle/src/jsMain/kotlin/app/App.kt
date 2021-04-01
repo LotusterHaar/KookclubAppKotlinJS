@@ -10,7 +10,6 @@ import react.dom.*
 import showMenuCard
 import ticker.*
 import kotlinext.js.*
-import kotlinx.html.js.*
 import kotlinx.coroutines.*
 
 val App = functionalComponent<RProps>() { _ ->
@@ -23,10 +22,19 @@ val App = functionalComponent<RProps>() { _ ->
         }
     }
 
+    fun deleteItem() {
+        GlobalScope.launch {
+            setMenuList(getMenuList())
+        }
+    }
+
+
+
+
     showAppBar()
 
-    menuList.forEach{ item->
-        showMenuCard { menuId = item.priority; day = "Dinsdag"; desc = item.desc}
+    menuList.forEach { item ->
+        showMenuCard { removeItem = { deleteItem() }; menuItem = item; menuId = item.index; day = "Dinsdag"; desc = item.desc }
     }
     p("App-intro") {
         +"To get started, edit "
@@ -43,7 +51,7 @@ val App = functionalComponent<RProps>() { _ ->
         InputComponent,
         props = jsObject {
             onSubmit = { input ->
-                val cartItem =MenuListItem(input.replace("!", ""), input.count { it == '!' })
+                val cartItem = MenuListItem(input.replace("!", ""), input.count { it == '!' })
                 GlobalScope.launch {
                     addMenuListItem(cartItem)
                     setMenuList(getMenuList())
