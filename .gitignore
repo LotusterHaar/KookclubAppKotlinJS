@@ -1,1 +1,16 @@
 /kookclub-app-gradle/build/
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\lotus\KookclubAppKotlinJS\kookclub-app-gradle\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+/.gradle/
+/build/
+/build/classes/kotlin/jvm/main/
+/build/js/packages/kookclub-app-gradle/kotlin/
+/.idea/
